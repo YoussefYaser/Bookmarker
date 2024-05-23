@@ -1,0 +1,147 @@
+/* START CUSTOM CLASSES */
+
+.w-fit{
+    width: fit-content;
+}
+
+.pt-sans-caption{
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+.righteous{
+    font-family: "Righteous", sans-serif;
+}
+
+.pacifico{
+    font-family: "Pacifico", cursive;
+}
+
+.fw-5{
+    font-weight: 500;
+}
+
+.fw-7{
+    font-weight: 700;
+}
+
+/* END CUSTOM CLASSES */
+
+*::selection{
+    background-color: #FEC260;
+    color: black;
+}
+
+.page{
+    background-color: #F7ECDE;
+}
+
+.page .bookmarker h1{
+    font-size: 3.125rem;
+}
+
+.page .bookmarker h1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    background-color: #FEC260;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.page .bookmarker h1:hover::before{
+    height: 70%;
+}
+
+.page .bookmarker > div{
+    border: 2px dotted black;
+    border-left: 0;
+    border-right: 0;
+}
+
+.page .bookmarker > div h2{
+    background: linear-gradient(to right,#3FA55B, #B2AC4A);
+    color: transparent; 
+    background-clip: text;
+}
+
+.page .bookmarker > div h2 .fa-bookmark:nth-of-type(1){
+    color: #3FA55B;
+}
+.page .bookmarker > div h2 .fa-bookmark:nth-of-type(2){
+    color: #B2AC4A;
+}
+
+.page .bookmarker > div form input:not(#search)::placeholder{
+    font-family: "PT Sans Caption", sans-serif;
+    Color: rgb(106, 115, 124);
+}
+
+.page .bookmarker > div form .form-control{
+    --bs-border-width: 2px;  
+}
+
+.page .bookmarker > div form .form-floating, 
+.page .bookmarker > div form #search.form-control ~ svg{
+    transition: 0.3s;
+}
+
+.page .bookmarker > div form .form-control:not(#search):focus,
+.page .bookmarker > div form .form-floating.focus{
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #fec160a5;
+}
+
+.page .bookmarker > div form #search.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.page .bookmarker > div form #search.form-control:focus ~ svg{
+    transform: scale(1.2);
+}
+
+.page .bookmarker > div form button.disable{
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+
+.page .bookmarker > div form button{
+    background-color: #D1512D;
+}
+
+.page .bookmarker > div form button:not(.disable):hover{
+    background-color: #b94829;
+}
+
+.page .bookmarker table{
+    background-color: #F8F9FA;
+}
+
+.page .bookmarker table tr > *{
+    padding: 0.8rem;
+}
+
+.page .bookmarker table tr a{
+    background-color: #8A9E23;
+}
+
+.page .bookmarker table tr a:hover{
+    background-color: #77881e;
+}
+
+.popover{
+    --bs-popover-body-padding-y: 0.3rem ;
+}
+
+.page .modal .modal-header .modal-title > span{
+    width: 25px;
+    height: 25px;
+}
+
+.page .modal  ul span{
+    width: 1.375rem;
+    height: 1.375rem;
+    font-size: 12px;
+}

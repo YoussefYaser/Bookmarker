@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10</title>
+
+    <!-- start font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!-- end font family -->
+
+    <!-- start font awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- end font awesome -->
+
+    <!-- start bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- end bootstrap -->
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="page">
+        <div class="container min-vh-100">
+            <div class="bookmarker px-0 px-md-5 py-5">
+                <h1 class="pacifico w-fit m-auto fw-5 position-relative z-0 mb-5">Bookmarker</h1>
+                <div class=" p-3">
+                    <h2 class="text-center righteous fw-5 mb-4">
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+                    <form action="">
+                        <label for="siteName" class="pt-sans-caption fw-7 mb-3">
+                            <i class="fa-solid fa-book-bookmark me-2"></i>
+                            Site Name
+                        </label>
+                        <input type="text" id="siteName" class="form-control mb-4 " placeholder="Bookmark Name"
+                            oninput="validation(this)">
+
+                        <label for="siteUrl" class="pt-sans-caption fw-7 mb-3">
+                            <i class="fa-solid fa-link me-2"></i>
+                            Site URL
+                        </label>
+                        <input type="text" id="siteUrl" class="form-control" placeholder="Website URL"
+                            oninput="validation(this)">
+                        <button type="button" id="addSiteBtn" class="text-capitalize btn d-block m-auto text-white pt-sans-caption px-5 mt-4">submit</button>
+                        
+                        <div class="form-floating my-4 d-flex align-items-center bg-white rounded border border-2 ">
+                            <input type="email" class="form-control border-0" id="search" placeholder="name">
+                            <label for="search">Search</label>
+                            <i class="fa-solid fa-magnifying-glass px-3"></i>
+                        </div>
+                    </form>
+                </div>
+                <table class=" mt-4 w-100 text-capitalize text-center pt-sans-caption">
+                    <thead>
+                        <tr class="border border-2 border-top-0 border-start-0 border-end-0">
+                            <th>index</th>
+                            <th>website name</th>
+                            <th>visit</th>
+                            <th>delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" id="validationModalBtn" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#validationModal">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade " id="validationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" z>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title fs-5 d-inline-flex" id="exampleModalLabel">
+                            <span class="rounded-circle me-2 bg-danger"></span>
+                            <span class="rounded-circle me-2 bg-warning"></span>
+                            <span class="rounded-circle me-2 bg-success"></span>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body righteous fs-5">
+                        Site Name or Url is not valid, Please follow the rules below :
+                        <ul class="list-unstyled pt-sans-caption mt-3 fs-6">
+                            <li class="mb-2">
+                                <span class="d-inline-flex justify-content-center align-items-center me-2 rounded-circle border border-2 border-danger text-danger">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                                Site name must start with capital letter
+                                and 20 letters with the capital one.
+                            </li>
+                            <li class="mb-2">
+                                <span class="d-inline-flex justify-content-center align-items-center me-2 rounded-circle border border-2 border-danger text-danger">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                                Site URL must be in the format (http://...) or (https://...)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
